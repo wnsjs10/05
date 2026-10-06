@@ -1,18 +1,21 @@
 #include <stdio.h>
 
 int main() {
-    int num;
-    int sum = 0;
-    int i;
+    int num1, num2;
+    char op;
 
-    printf("input a number:");
-    scanf("%d", &num);
+    printf("enter the calculation : ");
+    scanf("%d %c %d", &num1, &op, &num2);
 
-    for (i = 1; i <= num; i++) {
-        sum += i;
+    if (op == '+') {
+        printf("= %d\n", num1 + num2);
+    } else if (op == '-') {
+        printf("= %d\n", num1 - num2);
+    } else if (op == '*') {
+        printf("= %d\n", num1 * num2);
+    } else if (op == '/') {
+        printf("= %d\n", num1 / num2);
     }
-
-    printf("The result is %d\n", sum);
 
     return 0;
 }
